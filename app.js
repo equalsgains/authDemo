@@ -1,4 +1,12 @@
-var express = require("express");
+var     express               = require("express"),
+        mongoose              = require("mongoose"),
+        passport              = require("passport"),
+        bodyParser            = require("body-parser"),
+        LocalStrategy         = require("passport-local"),
+        passportLocalMongoose = require("passport-local-mongoose"),
+        User                  = require("./models/user");
+
+mongoose.connect("mongodb://localhost:27017/authDemo");
 
 var app = express();
 app.set('view engine', 'ejs');
