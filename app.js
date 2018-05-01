@@ -9,4 +9,8 @@ app.get("/", function(req, res){
 
 app.listen(3000, function(){
     console.log("server's running! bop bop");
-})
+});
+
+app.get("/secret", function(req, res){
+    res.render("secret");
+});
