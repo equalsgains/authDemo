@@ -62,6 +62,12 @@ app.post("/register", function(req, res){
 });
 
 
+// LOGIN ROUTES
+// RENDER LOGIN FORM
+app.get("/login", function(req, res){
+    res.render("login");
+});
+
 
 app.listen(3000, function(){
     console.log("server's running! bop bop");
